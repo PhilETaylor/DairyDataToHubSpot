@@ -1,0 +1,18 @@
+{
+  "autoload": {
+    "psr-4": {
+      "RedEvo\\": "src"
+    }
+  },
+  "require": {
+    "hubspot/api-client": "^11.3",
+    "symfony/dotenv": "^7.1",
+    "symfony/console": "^7.1",
+    "monolog/monolog": "^3.7"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+    ,
+    "symfony/var-dumper": "^7.1"
+  }
+}
