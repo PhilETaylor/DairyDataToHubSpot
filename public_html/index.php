@@ -13,7 +13,7 @@ require_once '../vendor/autoload.php';
 
 class IncomingRequestHandler
 {
-    public function __construct(LogHander $logger)
+    public function __construct(LogHander $logger, Halite $halite)
     {
         if ($_SERVER && array_key_exists('REMOTE_ADDR', $_SERVER)) {
             $logger->debug('IncomingRequestHandler invoked by '.$_SERVER['REMOTE_ADDR']);
@@ -42,6 +42,8 @@ class IncomingRequestHandler
 
             move_uploaded_file($file['tmp_name'], '../data/'.$file_name);
 
+            $halite->encrypt('../data/'.$file_name);
+
             $logger->info('File received successfully: '.$file_name);
 
             echo "File received successfully.";
@@ -54,4 +56,4 @@ class IncomingRequestHandler
 }
 
 
-$obj = new IncomingRequestHandler(new LogHander());
+$obj = new IncomingRequestHandler(new LogHander(), new Halite());
