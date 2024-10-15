@@ -9,11 +9,15 @@
     "symfony/dotenv": "^7.1",
     "symfony/console": "^7.1",
     "monolog/monolog": "^3.7",
-    "paragonie/halite": "^5.1"
+    "paragonie/halite": "^5.1",
+    "league/csv": "^9.16.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
     ,
-    "symfony/var-dumper": "^7.1"
+    "symfony/var-dumper": "^7.1",
+    "rector/rector": "^1.2",
+    "symplify/easy-coding-standard": "^12.3",
+    "erickskrauch/php-cs-fixer-custom-fixers": "^1.3"
   }
 }
