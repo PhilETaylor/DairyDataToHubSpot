@@ -1,0 +1,2 @@
+Contact: phil@phil-taylor.com
+Encryption: https://keys.phil-taylor.com/gpg_public_key.asc
