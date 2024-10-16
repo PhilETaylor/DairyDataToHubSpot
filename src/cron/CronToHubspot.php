@@ -117,7 +117,7 @@ class CronToHubspot
             $this->updateContact($results->getResults()[0], $data);
         }
 
-        usleep(100000);
+        usleep(300000);
     }
 
     private function createContact(array $record, array $data): void
