@@ -71,6 +71,7 @@ EOF
 
     $ecsConfig->paths(['src', 'public_html', 'ecs.php', 'rector.php']);
     $ecsConfig->cacheDirectory(__DIR__ . '/.cache/ecs');
+    
     $ecsConfig->parallel();
 
     $ecsConfig->rule(NativeConstantInvocationFixer::class);
