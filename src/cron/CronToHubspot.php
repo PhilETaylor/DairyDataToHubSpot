@@ -24,7 +24,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 $dotenv = new Dotenv();
 $dotenv->load(__DIR__ . '/../../.env');
 
-class cronToHubspot
+class CronToHubspot
 {
     private Discovery $hubspot;
 
@@ -82,6 +82,9 @@ class cronToHubspot
             echo $i++ . ' = ' . number_format($i / $count, 4) . \PHP_EOL;
             $this->processRecord($record);
         }
+
+        // delete the file
+        unlink($file);
     }
 
     private function processRecord(array $record): void
